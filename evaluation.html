@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" media="screen" type="text/css">
+        <link href="css/style.css" rel="stylesheet" media="screen" type="text/css">
+        <title></title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div id="quiz"></div>
+            <a onclick="sendEva('r1')">
+             
+          </a>
+        </div>
+        <div id="suggest" class="text-center">Loading</div>
+
+      
+            <script src="js/quiz-jquery.js" type="text/javascript"></script>
+            <script src="js/quiz-tabletop.js" type="text/javascript"></script>
+            <script src="js/quiz-script.js" type="text/javascript"></script>
+            
+            <script type="text/javascript">
+                var quiz = jQuery('#quiz').quiz('https://docs.google.com/spreadsheets/d/134tSe_T40NXxLP7_YQpVUfNB-FTIdXSOa6RtO1vFG8I/pubhtml'); //my published spreadsheet key or URL 
+            </script>
+
+  <!--          <script>
+              		function $(quiz) {
+                      // Need Login
+                      if (localStorage.getItem("username")){
+                      // Start	
+                      var quiz = jQuery('#quiz').quiz('https://docs.google.com/spreadsheets/d/134tSe_T40NXxLP7_YQpVUfNB-FTIdXSOa6RtO1vFG8I/pubhtml'); //my published spreadsheet key or URL 
+                       return false;
+                        // Need Login
+                      }else{
+                        alert("Please Login First!");
+                      }
+                    }
+            </script>
+  -->
+     
+       <script>
+   //         function score (nCorrect, nQuestions) {
+   //     var answersWord = nCorrect === 1 ? 'answer' : 'answers';
+      
+       // Test result
+  //      return 'You got <span class="correct-answers">' + nCorrect + '</span> ' +
+   //    'correct ' + answersWord + ' out of ' + nQuestions + ' questions';
+
+  //   var returnedObject = {};
+   //  returnedObject["nCorrect"] = value1;
+  //   return returnedObject;
+  //  } 
+         
+         /*
+         
+                     make_results_data_from_spreadsheet_data: function(tabletop, quiz_data) {
+                var ret = scores(quiz_data.length);
+
+                var data = tabletop['Results'] ? tabletop['Results'].elements : [];
+                for (var i = 0; i < data.length; i++) {
+                    var index = data[i].numberofrightanswers;
+                    if (index) { index = parseInt(index, 10); }
+                    if (!isNaN(index)) {
+                        if (!ret[index]) {
+                            console.log("Invalid number of correct answers: " + index);
+                        } else {
+                            ret[index] = data[i].html;
+                        }
+                    }
+                }
+
+                return ret;
+             //alert (index);
+                    //   var returnedObject = {};
+                    //   returnedObject["nCorrect"] = value1;
+                    //   return returnedObject;
+            },
+         
+         
+                function sendEva(newScore) {
+                  //score();
+                  alert("This is my score:" + newScore);
+                  var returnValue = score(nCorrect);
+
+
+                  // Need Login
+                  if (localStorage.getItem("username")){
+                  // Start	
+                  if (confirm("Do you confirm to send your evaluation result?")) {
+                    var user = {};
+                    var nCorrect = "";
+                    //user.action = "add_favourite";
+                    user.act = "add_evaluation";
+                    //user.url = $("#"+img).attr("src");
+                    user.score = returnValue;
+                    // y=nCorrect; alert(y)
+                    user.username = localStorage.getItem("username");
+
+                    $.ajax( {
+                      //url: "http://localhost:8000/index.html",
+                      url: "http://port-5001.mimi-mimiyu199137199.codeanyapp.com/search.html",
+                      type: "POST",
+                      data: user
+                    });
+                    return false;
+                  }
+                    // Need Login
+                  }else{
+                    alert("Need Login First!");
+                  }
+                }
+                */
+            </script> 
+
+    </body>
+</html>

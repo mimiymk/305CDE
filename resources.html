@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>305CDE Healthy Relationships Centre</title>
+
+	
+      <!-- Bootstrap Core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<!-- Include CSS File Here -->
+	<!-- <link rel="stylesheet" href="css/style.css"/> -->
+	<!-- Include JS File Here -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/registration.js"></script>
+	<script type="text/javascript" src="./js/register.js"></script>
+	
+	    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  
+
+	
+		<!-- For YouTube API -->
+	    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  
+      <link rel="stylesheet" href="css/youtubesearch.css">
+
+</head>
+
+<body>
+	
+
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+<!--
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+	<input type="button" id="btnLogout" value="Logout" onclick="Logout();">	
+
+-->
+
+
+	
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                
+							<div id="loginresult" style="color: white;">
+							</div>
+            </li>
+            <li>
+                <a href="#top" onclick=$("#menu-close").click();>Home</a>
+            </li>
+													
+			<!-- target blank page -->
+						<li>
+							<!-- <a href="aboutus.html" onclick=$("#menu-close").click();>About Us</a> -->
+                <a href="#about" onclick=$("#menu-close").click();>About Us</a>
+            </li>
+					<!--
+            <li>
+                <a href="services.html" onclick=$("#menu-close").click();>Services</a>
+            </li>
+					-->
+						<li>
+                <a href="service-test.html" onclick=$("#menu-close").click();>Service</a>
+            </li> 
+					<!--
+            <li>
+                <a href="resources.html" onclick=$("#menu-close").click();>Resources</a>
+            </li>
+-->
+
+            <li>
+              <!--  <a href="evaluation.html" onclick=$("#menu-close").click();>Evaluation</a> -->
+							  <a id="evl" style="cursor:pointer;">Evaluation</a>
+            </li>	
+					
+					<!-- Onliine Resources Link -->
+					 	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Resources<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a id="youtube" style="cursor:pointer;">Video and Music</a></li>
+								<li><a id="sch" style="cursor:pointer;">Image</a></li>
+								<li><a href="#">Article</a></li>
+							</ul>
+						</li>
+					
+					<!--
+					  <li>
+             /*   <a href="search.html" onclick=$("#menu-close").click();>search</a> */
+								<a id="sch" style="cursor:pointer;">Search Resources</a>
+            </li>	
+ 					-->
+						<li>
+							<a id="fav" style="cursor:pointer;">Favourite</a>
+            </li> 
+					<!--
+						<li>
+                <a href="forum.html" onclick=$("#menu-close").click();>Forum</a>
+            </li>				
+					-->
+						<li>
+                <a href="commitment.html" onclick=$("#menu-close").click();>Commitment</a>
+            </li>	
+					<!--
+            <li>
+                <a href="#contactus" onclick=$("#menu-close").click();>Contact</a>
+            </li>
+					-->
+						<li>
+                <a href="#signin" onclick=$("#menu-close").click();>Sign In</a>
+            </li>
+			
+						<li>
+               <!-- <button id="logout">Log Out</button> -->
+							<a id="logout" style="cursor:pointer;">Log Out</a>
+            </li> 
+					
+						<li>
+                <a href="api-endpoint.html" onclick=$("#menu-close").click();>API Endpoint</a>
+            </li>
+
+        </ul>
+    </nav>
+
+	
+	
+	
+<!-- YouTube API Search Start -->
+	
+  <div id="page__preloader" class="preloader">
+  <div class="loader"></div>
+  <div class="loader-text">Loading</div>
+</div>
+<div id="app" class="container">
+   <h2>Videos on youtube</h2>
+   <base target="_blank">
+   <div class="main-search">
+      <form class="main-search__form" action="">
+         <label class="main-search__label" for="youtube-field">Search:
+         <input v-model="message" value={message} class="main-search__input input" type="text" placeholder="write here" @keyup.enter="onClick" name="search" id="youtube-field">
+         </label>
+         <button v-on:click='onClick' class="main-search__button">Submit</button>
+      </form>
+   </div>
+   <hr width="90%" size="1">
+   <div class="main-results">
+      <form class="main-results__form" action="">
+         <label class="main-results__label" for="youtube-result">Search in results:
+         <input v-model="searchRes" class="main-results__input" type="text" name="search" id="youtube-result">
+         </label>
+      </form>
+   </div>
+   <button v-on:click='onSortClick' class="sort-button">Sort by name</button>
+   <div class="list-results">
+      <ul>
+         <li v-for="video in VideoListPerPage" >
+					 
+            <a :href="url + video.id.videoId" id="yt-link"><img :src="video.snippet.thumbnails.default.url"/></a>
+            <a :href="url + video.id.videoId"><span>{{video.snippet.title}}</span></a>     
+						
+					<!-- Add YouTube Button -->
+						<a id="yt" onclick="addConfirm()">+</a>
+								
+         </li>
+      </ul>
+   </div>
+   <div class="pagenavi">
+      <ul class="pagenavi__navlist">
+         <li class="pagenavi__nav" v-for="pag in pages" >
+            <a :id=pag v-on:click='onPageClick' v-bind:class="{ active: page == pag }" href="#">{{pag}}</a>
+         </li>
+      </ul>
+   </div>
+</div>
+  <script src='https://unpkg.com/vue/dist/vue.js'></script>
+	<script src='https://apis.google.com/js/client.js'></script>
+
+    <script src="js/youtubesearch.js"></script>
+
+	    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    </script>
+
+	<script>
+	
+	$(function() {
+		$("#login").click(function(e){
+			//alert("D");
+			//$(function(){
+				var user = {};
+				user.act = "login";
+				user.ac = $("input[name='log_ac']").val();
+				user.pw = $("input[name='log_pw']").val();
+				//alert(user.ac);
+				
+				$.ajax({
+					url: "/login",
+					type: "POST",
+					data: user,
+					success: function (result) {
+						alert('welcome'+ result);
+						localStorage.setItem("username", result);
+						$("#loginresult").html("Login:" + localStorage.getItem("username"));
+       			 console.log(result);
+        		if(result.status == 200){
+            		//console.log("hope can see here");
+        			}
+    			},
+    			error: function(result){
+        			//console.log(result);
+    				}
+				});
+				return false;
+			//});
+		});
+	
+		$("#sign_up").click(function(e){
+			var user = {};
+			user.act = "signup";
+			user.ac = $("input[name='ac']").val();
+			user.pw = $("input[name='pw']").val();
+			user.email = $("input[name='email']").val();
+			if(user.ac == ""||user.pw == ""||$("input[name='re_pw']").val()==""||user.email==""){
+				alert("Please input all infomration!");
+			}else if ($("input[name='re_pw']").val() != user.pw){
+				alert("Please input same password at repeat password!");
+			}else {
+				$.ajax( {
+					url: "/login",
+					type: "POST",
+					data: user,
+					datatype: "json",
+					success: function (result) {
+						alert('welcome'+ result);
+						
+
+       			
+						//console.log(result);
+        		//if(result.status == 200){
+            		//console.log("hope can see here");
+        			//}
+    			},
+    			error: function(result){
+        			//console.log(result);
+    				}
+				});
+			}
+			return false;
+		});
+	});
+	
+		/*
+	function addConfirm() {
+
+                  // Need Login
+                  if (localStorage.getItem("username")){
+                  // Start	
+                  if (confirm("Do you want to add the video?")) {
+                    var user = {};
+										
+									//	alert($(this).attr('href'));
+										//alert(this.items[0].snippet.title);
+										alert($('#yk-link').html());
+										
+                    user.act = "add_youtube";
+            				//user.video = $('#yk-video').html();
+										
+                    user.username = localStorage.getItem("username");
+
+										
+                    $.ajax( {
+                      
+                      url: "http://port-5001.mimi-mimiyu199137199.codeanyapp.com/resources.html",
+                      type: "POST",
+                      data: user
+                    });
+                    return false;
+                  }
+                    // Need Login
+                  }else{
+                    alert("Need Login First!");
+                  }
+                }	
+		
+		*/
+		
+$(function() {
+    if (localStorage.getItem("username")){
+			$("#loginresult").html("Login:" + localStorage.getItem("username"));
+		}else{
+			$("#loginresult").html("No Login");
+		}
+});
+		
+		$("#logout").click(function(e){
+	alert("Lougut");
+    localStorage.removeItem("username");
+
+			$("#loginresult").html("No Login");
+});		
+		
+				$("#fav").click(function(e){
+					if (localStorage.getItem("username")){
+	window.location.href = "favourite.html"
+					}else{
+						alert("No Login");
+					}
+});		
+		
+				$("#sch").click(function(e){
+					if (localStorage.getItem("username")){
+	window.location.href = "search.html"
+					}else{
+						alert("No Login");
+					}
+});		
+		
+			$("#youtube").click(function(e){
+					if (localStorage.getItem("username")){
+	window.location.href = "resources-test.html"
+					}else{
+						alert("No Login");
+					}
+});		
+		
+						$("#evl").click(function(e){
+					if (localStorage.getItem("username")){
+	window.location.href = "evaluation.html"
+					}else{
+						alert("No Login");
+					}
+});		
+		
+		
+</script>
+</body>
+
+</html>

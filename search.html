@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> 
+<![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> 
+<![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<title>305CDE</title>
+    <meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+	<!--Favicons-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+
+	<!--Main CSS-->
+	<!-- <link rel="stylesheet" href="css/t_s.css"> -->
+    
+    <!--The CSS of Bootstrap and Custom-->
+ <!--   <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+   <!-- <link rel="stylesheet" href="css/ame.css"> -->
+ <!--   <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+	<!--<link rel="stylesheet" href="css/t_m.css">-->
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+	<script>
+	function search() {
+			alert("search");
+			var searchKey = $("#key").val();
+			var searchResult = $.getJSON( "https://api.cognitive.microsoft.com/bing/v5.0/images/search?width=650&height=435&subscription-key=cebbe5720816444fb7d3953a68927840&q=" + searchKey, function() {
+			// https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=Ks-_Mh1QhMc&type=video
+			// google developer key
+				
+				console.log( "success" );
+			})
+			.done(function() {
+				console.log( "second success" );
+			})
+			.fail(function() {
+				console.log( "error" );
+			})
+			.always(function() {
+				console.log( "complete" );
+			});
+			searchResult.complete(function() {
+				alert(searchResult['name']);
+				alert("complete");
+				$("#image1").attr("src", JSON.parse(searchResult.responseText).value[0].thumbnailUrl);
+				$("#image2").attr("src", JSON.parse(searchResult.responseText).value[1].thumbnailUrl);
+				$("#image3").attr("src", JSON.parse(searchResult.responseText).value[2].thumbnailUrl);
+				$("#image4").attr("src", JSON.parse(searchResult.responseText).value[3].thumbnailUrl);
+				$("#image5").attr("src", JSON.parse(searchResult.responseText).value[4].thumbnailUrl);
+				$("#image6").attr("src", JSON.parse(searchResult.responseText).value[5].thumbnailUrl);
+				$("#image7").attr("src", JSON.parse(searchResult.responseText).value[6].thumbnailUrl);
+				$("#image8").attr("src", JSON.parse(searchResult.responseText).value[7].thumbnailUrl);
+				$("#image9").attr("src", JSON.parse(searchResult.responseText).value[8].thumbnailUrl);
+			});
+			
+			
+		}
+	</script>
+<body>
+	
+	
+	<div id="menu-container">
+
+		<div class="content homepage" id="menu-1">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-md-offset-4" ng-app="">
+						<input class="icon-item2" id="key" type="text" size="40" placeholder="Type any things what you want. " ng-model="key">
+						<input class="icon-item2" type="button" value="Search" onclick='search()'>
+						<br></br>
+						<button class="icon-item2" size="5">You want to search: {{key}}</button>
+						<br></br>
+					</div>
+					<div class="col-md-2 col-sm-6 col-md-offset-1">
+						<div class="gallery-item">
+								<img id="image1" src="images/country/1.jpg" alt="image 1">
+								<div class="overlay">
+									<a id="a1" class="fa fa-expand" onclick="doConfirm('image1')">+</a>
+								</div>
+							<div class="content-gallery">
+								<h3 id="title1"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a2" class="fa fa-expand" onclick="doConfirm('image2')">+</a>
+								</div>
+								<img id="image2" src="images/country/2.jpg" alt="image 2">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title2"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a3" class="fa fa-expand" onclick="doConfirm('image3')">+</a>
+								</div>
+								<img id="image3" src="images/country/3.jpg" alt="image 3">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title3"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a4" class="fa fa-expand" onclick="doConfirm('image4')">+</a>
+								</div>
+								<img id="image4" src="images/country/4.jpg" alt="image 4">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title4"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a5" class="fa fa-expand" onclick="doConfirm('image5')">+</a>
+								</div>
+								<img id="image5" src="images/country/5.jpg" alt="image 5">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title5"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6 col-md-offset-2">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a6" class="fa fa-expand" onclick="doConfirm('image6')">+</a>
+								</div>
+								<img id="image6" src="images/country/6.jpg" alt="image 6">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title6"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a7" class="fa fa-expand" onclick="doConfirm('image7')">+</a>
+								</div>
+								<img id="image7" src="images/country/7.jpg" alt="image 7">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title7"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a8" class="fa fa-expand" onclick="doConfirm('image8')">+</a>
+								</div>
+								<img id="image8" src="images/country/8.jpg" alt="image 8">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title8"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a9" class="fa fa-expand" onclick="doConfirm('image9')">+</a>
+								</div>
+								<img id="image9" src="images/country/9.jpg" alt="image 9">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title9"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+				</div> <!--/.row-->
+			</div> <!--/.slide-item-->
+		</div> <!--/.homepage-->
+
+
+
+	<!-- Scripts -->
+	<script src="js/jquery.js"></script>
+ <!--   <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/m.js"></script> -->
+	<script src="js/bootstrap.js"></script>
+<!--	<script src="js/ts.js"></script>
+	<script src="js/jquery.lightbox.js"></script>
+	<script src="js/t_c.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnXHokpOy_wqm5vbFNfDbEdkuTbIi1hJk&callback=initMap">
+    </script>
+   
+
+	<script>
+		window.onload = function() {
+			$("#li1").show();
+			$("#li2").hide();
+		}
+	
+		// Receive message from server
+	
+		
+		
+		var rulList;
+		
+		function updateFavouriteList(list) {
+			urlList = list;
+			document.getElementById("fav_list").innerHTML = "";
+			for (var i=0; i<list.length; i++) {
+				document.getElementById("fav_list").innerHTML +=
+				"<div class='col-md-2 col-sm-6 col-md-offset-0'>" +
+					"<div class='gallery-item'>" +
+						"<img id='image' src="+list[i]+" alt='image'>" +
+							"<div style ='text-align: center;'>" +
+							"<input type'button' value='Drop' st yle='height:35px;width:100px' onclick='remove("+i+")'>" +
+							"</div>" +
+					"</div>" +
+				"</div>";
+			}
+		}
+		
+
+	
+	/*	
+		function initMap() {
+			var mapOptions = {
+			  	zoom: 18,
+			  	center: {lat: 22.2774528, lng: 114.1753353}
+			}
+			var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+			var marker = new google.maps.Marker({
+			  	position: {lat: 22.2765435, lng: 114.1775005},
+			  	map: map
+			});
+		}
+	*/	
+		
+		$(function() {
+			$("#btnSignIn").click(function(e) {
+				window.location = "/signin.html";
+			});
+		});
+		
+		function doConfirm(img) {
+			// Need Login
+			if (localStorage.getItem("username")){
+			// Start	
+			if (confirm("Do you want to add this photo in your favourite list?")) {
+				var user = {};
+				//user.action = "add_favourite";
+				user.act = "add_favourite";
+				user.url = $("#"+img).attr("src");
+				user.username = localStorage.getItem("username");
+				
+				$.ajax( {
+					//url: "http://localhost:8000/index.html",
+					url: "/search",
+					type: "POST",
+					data: user
+				});
+				return false;
+			}
+				// Need Login
+			}else{
+				alert("Need Login First!");
+			}
+		}
+				
+		function resetPassword() {
+			window.location = "/rsp.html";
+		}
+		
+		function signOut() {
+			var user = {};
+			user.action = "sign_out";
+			$.ajax( {
+				url: "http://localhost:5001/index.html",
+				type: "POST",
+				data: user
+			});
+			document.getElementById("form1").innerHTML = 
+				"<input id='btnSignIn' type='button' style='height:50px;width:200px' value='Sign in'>";
+			window.location = "/index.html";
+			return false;
+		}
+		
+	
+	</script>
+
+</body>
+</html>

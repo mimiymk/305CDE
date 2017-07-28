@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://simplybook.me/api_example/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <title>Consultation Booking System</title>
+        
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/datepicker3.min.css" rel="stylesheet">
+        
+        <link href="./css/scheduler.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+	// Simplybook Client Side API ***
+// Simplybook user api
+//var loginClient = new JSONRpcClient({
+	
+//'url': 'http://user-api.simplybook.me' + '/login',
+//'onerror': function (error) {},
+//});
+//var token = loginClient.getToken('305cdehealthyrelationshipcenter', '934924ba30f44371a6ffc8004ea22954ede49025185359e8469bb08feac6c0b6');
+
+		// Ajax call Simplybook Client Side API - User API ***
+		//function booking() {
+		//	var user = {};
+		//	user.action = "booking";
+		//	$.ajax( {
+		//		url: "http://user-api.simplybook.me/login",
+		//		type: "GET",
+		//		data: user
+		//	});
+		//	document.getElementById("book01").innerHTML = 
+		//		"<input id='bookbtn01' type='button' style='height:50px;width:200px' value='book'>";
+		//	window.location = "/service-test.html";
+		//	return false;
+		//}
+		
+		
+
+// Simplybook admin api
+//var loginClient = new JSONRpcClient({
+//'url': 'http://user-api.simplybook.me' + '/login',
+//'onerror': function (error) {},
+//});
+//var token = loginClient.getUserToken('305cdehealthyrelationshipcenter', '934924ba30f44371a6ffc8004ea22954ede49025185359e8469bb08feac6c0b6', 'Simply@1234');
+
+
+	</script>
+	
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h3 class="text-muted">Booking Consultation</h3>
+            </div>
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <form role="form" class="form-horizontal">
+                            <div id="schedule">
+	                            <div class="form-group">
+	                                <label for="event_id" class="control-label">Select service</label>
+	                                <select id="event_id" class="form-control time-handler">
+	                                    <option>Please Select Service Type*</option>
+	                               <!-- <option value="1"></option>
+																	<option value="2"></option>	
+																	<option value="3"></option>
+																	<option value="4"></option>
+																	<option value="7"></option>
+																	<option value="11"></option> -->
+																</select>
+	                            </div>
+	                            <div class="form-group">
+	                                <label for="unit_id" class="control-label">Select service performer</label>
+	                                <select id="unit_id" class="form-control time-handler">
+	                                    <option>Please Select Service Performer*</option>
+	                               <!-- <option value="1"></option> -->
+																</select>
+	                            </div>
+	                            <div class="form-group">
+	                                <div class="row">
+																		<!--
+	                                    <div class="col-sm-3">
+-->
+																		<div class="col-sm-5">
+			                                <label for="date" class="control-label">Select date start</label>
+																			
+			                                <div id="date">
+																				<!--
+																				<div class="datepicker datepicker-inline">
+																				
+																				<div class="datepicker-days" style="display: block;">
+																					<table class=" table-condensed">
+																						<thead>
+																							<tr>
+																								<th class="prev" style="visibility: hidden;">«</th>
+																								<th colspan="5" class="datepicker-switch">July 2017</th>
+																								<th class="next" style="visibility: visible;">»</th>
+																							</tr>
+																							<tr>
+																								<th class="dow">Su</th>
+																								<th class="dow">Mo</th>
+																								<th class="dow">Tu</th>
+																								<th class="dow">We</th>
+																								<th class="dow">Th</th>
+																								<th class="dow">Fr</th>
+																								<th class="dow">Sa</th>
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td class="old disabled day">25</td>
+																								<td class="old disabled day">26</td>
+																								<td class="old disabled day">27</td>
+																								<td class="old disabled day">28</td>
+																								<td class="old disabled day">29</td>
+																								<td class="old disabled day">30</td>
+																								<td class="disabled day">1</td>
+																							</tr>
+																							<tr>
+																								<td class="disabled day">2</td>
+																								<td class="disabled day">3</td>
+																								<td class="disabled day">4</td>
+																								<td class="disabled day">5</td>
+																								<td class="disabled day">6</td>
+																								<td class="today active day">7</td>
+																								<td class="day">8</td>
+																							</tr>
+																							<tr>
+																								<td class="day">9</td>
+																								<td class="day">10</td>
+																								<td class="day">11</td>
+																								<td class="day">12</td>
+																								<td class="day">13</td>
+																								<td class="day">14</td>
+																								<td class="day">15</td>
+																							</tr>
+																							<tr>
+																								<td class="day">16</td>
+																								<td class="day">17</td>
+																								<td class="day">18</td>
+																								<td class="day">19</td>
+																								<td class="day">20</td>
+																								<td class="day">21</td>
+																								<td class="day">22</td>
+																							</tr>
+																							<tr>
+																								<td class="day">23</td>
+																								<td class="day">24</td>
+																								<td class="day">25</td>
+																								<td class="day">26</td>
+																								<td class="day">27</td>
+																								<td class="day">28</td>
+																								<td class="day">29</td>
+																							</tr>
+																							<tr>
+																								<td class="day">30</td>
+																								<td class="day">31</td>
+																								<td class="new day">1</td>
+																								<td class="new day">2</td>
+																								<td class="new day">3</td>
+																								<td class="new day">4</td>
+																								<td class="new day">5</td>
+																							</tr>
+																						</tbody>
+																						<tfoot>
+																							<tr>
+																								<th colspan="7" class="today" style="display: none;">Today</th>
+																							</tr>
+																							<tr>
+																								<th colspan="7" class="clear" style="display: none;">Clear</th>
+																							</tr>
+																						</tfoot>
+																					</table>
+																				</div>
+																				<div class="datepicker-months" style="display: none;">
+																					<table class="table-condensed">
+																						<thead>
+																							<tr>
+																								<th class="prev" style="visibility: hidden;">«</th>
+																								<th colspan="5" class="datepicker-switch">2017</th>
+																								<th class="next" style="visibility: visible;">»</th>
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td colspan="7">
+																									<span class="month disabled">Jan</span>
+																									<span class="month disabled">Feb</span>
+																									<span class="month disabled">Mar</span>
+																									<span class="month disabled">Apr</span>
+																									<span class="month disabled">May</span>
+																									<span class="month disabled">Jun</span>
+																									<span class="month active">Jul</span>
+																									<span class="month">Aug</span>
+																									<span class="month">Sep</span>
+																									<span class="month">Oct</span>
+																									<span class="month">Nov</span>
+																									<span class="month">Dec</span>
+																								</td>
+																							</tr>
+																						</tbody>
+																						<tfoot>
+																							<tr>
+																								<th colspan="7" class="today" style="display: none;">Today</th>
+																							</tr>
+																							<tr>
+																								<th colspan="7" class="clear" style="display: none;">Clear</th>
+																							</tr>
+																						</tfoot>
+																					</table>
+																				</div>
+																				<div class="datepicker-years" style="display: none;">
+																					<table class="table-condensed">
+																						<thead>
+																							<tr>
+																								<th class="prev" style="visibility: hidden;">«</th>
+																								<th colspan="5" class="datepicker-switch">2010-2019</th>
+																								<th class="next" style="visibility: visible;">»</th>
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td colspan="7">
+																									<span class="year old disabled">2009</span>
+																									<span class="year disabled">2010</span>
+																									<span class="year disabled">2011</span>
+																									<span class="year disabled">2012</span>
+																									<span class="year disabled">2013</span>
+																									<span class="year disabled">2014</span>
+																									<span class="year disabled">2015</span>
+																									<span class="year disabled">2016</span>
+																									<span class="year active">2017</span>
+																									<span class="year">2018</span>
+																									<span class="year">2019</span>
+																									<span class="year new">2020</span>
+																								</td>
+																							</tr>
+																						</tbody>
+																						<tfoot>
+																							<tr>
+																								<th colspan="7" class="today" style="display: none;">Today</th>
+																							</tr>
+																							<tr>
+																								<th colspan="7" class="clear" style="display: none;">Clear</th>
+																							</tr>
+																						</tfoot>
+																					</table>
+																				</div>
+																				
+																				</div>
+																				-->
+																				</div>
+																				
+		                                </div>
+		                                <div class="col-sm-4">
+	                                        <label for="unit_id" class="control-label">Select time start</label>
+	                                        <div id="time" class="row">
+                                                <div class="col-sm-12" id="busy">All slots are busy.</div>
+	                                        </div>
+		                                </div>
+	                                </div>
+	                            </div>
+	                            <div class="form-group" id="qty-element" style="display: none;">
+                                    <label for="qty" class="control-label">Select bookings quantity</label>
+                                    <select name="qty" id="qty" class="form-control time-handler">
+                                        <option value="1">1</option>
+                                    </select>
+	                            </div>
+	                            <div class="form-group">
+	                                <button type="button" class="btn btn-lg btn-default" id="book">Book</button>
+	                            </div>
+                            </div>
+                            <div id="client">
+                                <div>
+	                                <dl class="dl-horizontal">
+	                                    <dt>Service</dt>
+	                                    <dd id="event_name"></dd>
+	                                </dl>
+	                                <dl class="dl-horizontal">
+	                                    <dt>Service performer</dt>
+	                                    <dd id="unit_name"></dd>
+	                                </dl>
+	                                <dl class="dl-horizontal">
+	                                    <dt>Selected date and time</dt>
+	                                    <dd><span id="date_start"></span> - <span id="date_end"></span></dd>
+	                                </dl>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="name" class="col-sm-2 control-label">Client name</label>
+                                    <div class="col-sm-10">
+                                        <input type="name" class="form-control" id="name" placeholder="Client name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="col-sm-2 control-label">Phone</label>
+                                    <div class="col-sm-10">
+                                        <input type="phone" class="form-control" id="phone" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div id="additional-fields">
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-lg btn-default" id="cancel">Cancel</button>
+                                    <button type="button" class="btn btn-lg btn-primary" id="add_booking" style="display: none;">Add more bookings</button>
+                                    <button type="button" class="btn btn-lg btn-primary" id="confirm_batch" style="display: none;">Confirm</button>
+                                    <button type="button" class="btn btn-lg btn-primary" id="confirm" onclick='bookConfirm()'>Confirm</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+            <!-- <div class="footer">
+                <p>© <a href="http://simplybook.me/">Simplybook.me</a> 2014</p>
+            </div> -->
+        
+					
+					
+        </div>
+
+        
+        <!-- Javascipt -->
+        <!-- <script src="./js/jquery.min.js.download"></script>
+        <script src="./js/bootstrap.min.js.download"></script> -->
+				<script src="./js/jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/bootstrap-datepicker.min.js"></script>
+        
+        <script src="./js/json-rpc-client.js"></script>
+        <script src="./js/scheduler.js"></script>
+    
+			<script>
+			
+	//		function bookConfirm() {
+	//		if (confirm("Do you want to make the consultation?")) {
+	//			var user = {};
+	//			user.act = "add_booking";
+				//user.url = $("#"+img).attr("src");
+				
+				//user.result = $("#unit_id").val();
+				
+	//			ßuser.result = $("option[name='unit_id']").val();
+				//'#unit_id option[value]'
+		//		$.ajax( {
+	//				url: "http://port-5001.mimi-mimiyu199137199.codeanyapp.com/service-test.html",
+	//				type: "POST",
+	//				data: user
+	//			});
+	//			return false;
+	//		}
+	//	}
+				
+				function bookConfirm() {
+                  //score();
+                  //var returnValue = score(nCorrect);
+
+
+                  // Need Login
+                  if (localStorage.getItem("username")){
+                  // Start	
+                  if (confirm("Do you want to make the consultation?")) {
+                    var user = {};
+                    user.act = "add_booking";
+            				user.bookstart = $('#date_start').html();
+										user.bookend = $('#date_end').html();
+                    user.username = localStorage.getItem("username");
+										
+										
+										
+//alert($('#date_start').html());
+//alert($('#date_end').html());
+										
+										
+										
+										
+										
+                    $.ajax( {
+                      
+                      url: "http://port-5001.mimi-mimiyu199137199.codeanyapp.com/service-test.html",
+                      type: "POST",
+                      data: user
+                    });
+                    return false;
+                  }
+                    // Need Login
+                  }else{
+                    alert("Need Login First!");
+                  }
+                }
+			
+				
+
+			</script>
+			
+			
+</body></html>

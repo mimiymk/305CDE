@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<!-- Include CSS File Here -->
+	<link rel="stylesheet" href="css/style.css"/>
+	<!-- Include JS File Here 
+	<script type="text/javascript" src="./js/registration.js"></script>
+	<script type="text/javascript" src="./js/register.js"></script>-->
+	
+	    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <!--<a href="#top" onclick=$("#menu-close").click();>Back To Top</a>-->
+							<div id="loginresult">
+							</div>
+            </li>
+            <li>
+                <a href="#top" onclick=$("#menu-close").click();>Home</a>
+            </li>
+													
+			<!-- target blank page -->
+						<li>
+                <a href="aboutus.html" onclick=$("#menu-close").click();>About Us</a>
+            </li>
+					
+            <li>
+                <a href="services.html" onclick=$("#menu-close").click();>Services</a>
+            </li>
+            <li>
+                <a href="resources.html" onclick=$("#menu-close").click();>Resources</a>
+            </li>
+            <li>
+                <a href="evaluation.html" onclick=$("#menu-close").click();>Evaluation</a>
+            </li>	
+					  <li>
+                <a href="search.html" onclick=$("#menu-close").click();>search</a>
+            </li>	
+						<li>
+                <a href="commitment.html" onclick=$("#menu-close").click();>Commitment</a>
+            </li>	
+						<li>
+                <a href="forum.html" onclick=$("#menu-close").click();>Forum</a>
+            </li>				
+            <li>
+                <a href="contact.html" onclick=$("#menu-close").click();>Contact</a>
+            </li>
+						<li>
+                <a href="#signin" onclick=$("#menu-close").click();>Sign In</a>
+            </li>
+						<li>
+                <a href="sheettest.html" onclick=$("#menu-close").click();>Test</a>
+            </li> 
+					 	<li>
+                <a href="googlesample.html" onclick=$("#menu-close").click();>Sample</a>
+            </li> 
+					 	<li>
+                <a href="service-test.html" onclick=$("#menu-close").click();>Service test</a>
+            </li> 			
+						<li>
+                <a href="favourite.html" onclick=$("#menu-close").click();>Favourite List</a>
+            </li> 
+			
+<!--			
+            <li>
+                <a href="#about" onclick=$("#menu-close").click();>About</a>
+            </li>
+					
+            <li>
+                <a href="#services" onclick=$("#menu-close").click();>Services</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+            </li>
+			<li>
+                <a href="#signin" onclick=$("#menu-close").click();>Sign In</a>
+            </li>
+-->			
+        </ul>
+    </nav>
+
+ 
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Favourite List</h2>
+                    <hr class="small">
+									
+									
+                    <div class="row">
+											<!--<button id="flistbutton" onclick="updateFavouriteList(list)">
+												Show Favourite
+											</button>
+											
+											<div id="flistresult">
+											</div>
+											-->
+											<!--<li id="flistresult"><a class="show-3 templatemo_page3" href="" onclick="updateFavouriteList(list)">Favourite List</a></li>
+											-->
+											
+											<button id="flistbutton" disabled>favourite</button>
+                      <div id="flistresult">
+											</div>
+											<!--<button type="button" class="btn btn-outline-warning">Delete</button>-->
+											
+											<hr>
+											
+														
+											<!-- Booking Result Start -->
+												<div id="blistresult">
+												</div>
+											<!-- Booking Result End -->
+
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+  
+ 
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Start Bootstrap</strong>
+                    </h4>
+                    <p>3481 Melrose Place
+                        <br>Beverly Hills, CA 90210</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+ 
+    </script>
+
+	<script>
+	
+	$(function() {
+		$("#login").click(function(e){
+			//alert("D");
+			$(function(){
+				var user = {};
+				user.act = "login";
+				user.ac = $("input[name='log_ac']").val();
+				user.pw = $("input[name='log_pw']").val();
+				//alert(user.ac);
+				
+				$.ajax({
+					url: "http://port-XXXX.mimi-mimiyu199137199.codeanyapp.com/login.html",
+					type: "POST",
+					data: user,
+					success: function (result) {
+						alert('welcome'+ result);
+						localStorage.setItem("username", result);
+						$("#loginresult").html("Login:" + localStorage.getItem("username"));
+       			 console.log(result);
+        		if(result.status == 200){
+            		console.log("hope can see here");
+        			}
+    			},
+    			error: function(result){
+        			console.log(result);
+    				}
+				});
+				return false;
+			});
+		});
+	
+		$("#sign_up").click(function(e){
+			var user = {};
+			user.act = "signup";
+			user.ac = $("input[name='ac']").val();
+			user.pw = $("input[name='pw']").val();
+			user.email = $("input[name='email']").val();
+			if(user.ac == ""||user.pw == ""||$("input[name='re_pw']").val()==""||user.email==""){
+				alert("Please input all infomration!");
+			}else if ($("input[name='re_pw']").val() != user.pw){
+				alert("Please input same password at repeat password!");
+			}else {
+				$.ajax( {
+					url: "/login.html",
+					type: "POST",
+					data: user,
+					datatype: "json",
+					success: function (result) {
+						alert('welcome'+ result);
+						
+
+       			
+						console.log(result);
+        		if(result.status == 200){
+            		console.log("hope can see here");
+        			}
+    			},
+    			error: function(result){
+        			console.log(result);
+    				}
+				});
+			}
+			return false;
+		});
+		
+	});
+		
+$(function() {
+    if (localStorage.getItem("username")){
+			
+		}else{
+			alert("No Login");
+			window.location.href = "index.html"
+		}
+});
+
+		
+		
+		function remove(num) {
+			
+			alert(num);
+			var user= {};
+			user.act = "remove_favourite";
+			user.url = num;
+			user.username = localStorage.getItem("username");
+			alert(user.username);
+			$.ajax( {
+				url: "/favourite.html",
+				type: "POST",
+				data: user
+				
+			});
+			location.reload();
+			return false;
+		}
+		
+		
+		
+		
+		
+		
+		
+ $( document ).ready(function() { 
+    alert("ajax get favourite list");
+	 var user = {};
+			user.act = "get_favourite";
+ // $(function(){
+    $.ajax({
+					url: "/favourite",
+					type: "POST",
+					data: user,
+					datatype: "json",
+      // mongod is expecting the parameter name to be called "jsonp"
+      success: function (data) {
+			//	var temp = JSON.stringify(data);
+				var temp1="";
+				//var temp = JSON.parse(data);
+        //alert(temp);
+				//alert(data[0]['favouritename']);
+				//console.log(data[0]['favouritename']);
+        console.log('success', data);
+	
+        //$('flistresult').html(data);
+				for (i = 0; i < data.length; i++){
+					temp1 += "<div class ='infobboxItem'>\n";
+					//temp += "<div>Favourite list:"+data[i].favouritename+"</div>\n";
+					temp1 += "<div>Favourite list:"+data[i]['favouritename']+"</div>\n";
+					temp1 += "<img id='image' src="+data[i]['favouritename']+" alt='image'>"
+					//temp1 += "<button type='button' class='btn btn-outline-warning' onclick='remove("+i+")'>"Delete"</button>"
+					temp1 += "<div style ='text-align: center;'>" +
+									 //"<input type'button' value='Drop' st yle='height:35px;width:100px' onclick='remove("+i+")'>" +
+									// "<button type='button' class='btn btn-outline-danger' onclick='remove('favouritename')'>"+("delete")+"</button>"
+							    //"<button type='button' class='btn btn-outline-danger' data[i]['favouritename'].onclick='remove("+i+")'></button>"
+						//"<button type='button' class='btn btn-outline-danger' onclick='remove(" + i + ")'> + data[i] + </button>"
+							     //"<button type='button' class='btn btn-outline-danger' onclick='remove('favouritename')'></button>"
+						       "<button onclick=\"remove('"+data[i]['favouritename']+"')\"></button>"+
+									 "</div>\n";
+					temp1 += "<div>\n;"
+					
+					//newList += "<a href='javascript:void(0)' onClick='removeArray(" + i + "); return false;'> DELETE </a> " + ListOfArray[i] + " <br>";
+					
+				}
+				
+				$('#flistresult').html(temp1);
+				
+      },
+      error: function (XMLHttpRequest, textStatus, errorThrown) {
+      
+			 console.log('error', errorThrown);
+			//error: function(error) {alert(JSON.stringify(error)); 
+      }
+    });
+  //});//]]>
+   return false;
+ });	
+
+		
+
+		
+		
+				
+/// get booking ////
+				
+$( document ).ready(function() { 
+    alert("ajax get booking list");
+	 var user = {};
+			user.act = "get_booking";
+ // $(function(){
+    $.ajax({
+					url: "/favourite",
+					type: "POST",
+					data: user,
+					datatype: "json",
+      // mongod is expecting the parameter name to be called "jsonp"
+      success: function (data) {
+			//	var temp = JSON.stringify(data);
+				var temp1="";
+				//var temp = JSON.parse(data);
+        //alert(temp);
+				//alert(data[0]['favouritename']);
+				//console.log(data[0]['favouritename']);
+        console.log('success', data);
+	
+        //$('flistresult').html(data);
+				for (i = 0; i < data.length; i++){
+				//	temp1 += "<div class ='infobboxItem'>\n"; //new1
+					//temp += "<div>Favourite list:"+data[i].favouritename+"</div>\n";
+					temp1 += "<div>Your Consultation List:"+"</div>\n";
+					temp1 += "<div>Your Consultation Start Time: "+data[i]['bookingstart']+"</div>\n";
+					//temp1 += "<div>Your Consultation End Time: "+data[i]['bookingstart']+"</div>\n";
+					//temp1 += "<img id='image' src="+data[i]['bookingstart']+" alt='image'>"
+					//temp1 += "<button type='button' class='btn btn-outline-warning' onclick='remove("+i+")'>"Delete"</button>"
+					//temp1 += "<div style ='text-align: center;'>" + //new
+					//		 		"<button onclick=\"removebook('"+data[i]['bookingstart']+"')\"></button>"+
+					//				 "</div>\n"; //new
+				//	temp1 += "<div>\n;" //new1
+					
+					//newList += "<a href='javascript:void(0)' onClick='removeArray(" + i + "); return false;'> DELETE </a> " + ListOfArray[i] + " <br>";
+					
+				}
+				
+				$('#blistresult').html(temp1);
+				
+      },
+      error: function (XMLHttpRequest, textStatus, errorThrown) {
+      
+			 console.log('error', errorThrown);
+			//error: function(error) {alert(JSON.stringify(error)); 
+      }
+    });
+  //});//]]>
+   return false;
+ });	
+		
+		
+//$(function() {
+//    if (localStorage.getItem("favouritename")){
+//			$("#flistresult").html("Login:" + localStorage.getItem("favouritename"));
+//		}else{
+//			$("#flistresult").html("Empty");
+//		}
+//});		
+		
+</script>
+	
+</body>
+
+</html>
+

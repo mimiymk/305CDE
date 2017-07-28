@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<!-- Include CSS File Here -->
+	<link rel="stylesheet" href="css/style.css"/>
+	<!-- Include JS File Here -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/registration.js"></script>
+	<script type="text/javascript" src="./js/register.js"></script>
+	
+	    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+	<!-- Angular JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<!-- W3.CSS -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <!--<a href="#top" onclick=$("#menu-close").click();>Back To Top</a>-->
+							<div id="loginresult" style="color: white;">
+							</div>
+            </li>
+            <li>
+                <a href="index.html" onclick=$("#menu-close").click();>Home</a>
+            </li>
+													
+			<!-- target blank page -->
+						<li>
+                <a href="aboutus.html" onclick=$("#menu-close").click();>About Us</a>
+            </li>
+					
+            <li>
+                <a href="services.html" onclick=$("#menu-close").click();>Services</a>
+            </li>
+            <li>
+                <a href="resources.html" onclick=$("#menu-close").click();>Resources</a>
+            </li>
+            <li>
+              <!--  <a href="evaluation.html" onclick=$("#menu-close").click();>Evaluation</a> -->
+							  <a id="evl" style="cursor:pointer;">Evaluation</a>
+            </li>	
+					  <li>
+               <!-- <a href="search.html" onclick=$("#menu-close").click();>search</a> -->
+								<a id="sch" style="cursor:pointer;">search</a>
+            </li>	
+						<li>
+                <a href="commitment.html" onclick=$("#menu-close").click();>Commitment</a>
+            </li>	
+						<li>
+                <a href="forum.html" onclick=$("#menu-close").click();>Forum</a>
+            </li>				
+            <li>
+                <a href="contact.html" onclick=$("#menu-close").click();>Contact</a>
+            </li>
+						<li>
+                <a href="#signin" onclick=$("#menu-close").click();>Sign In</a>
+            </li>
+					
+
+					
+					<!--	Google Login Test
+						<li>
+                <a href="sheettest.html" onclick=$("#menu-close").click();>Test</a>
+            </li> 
+					-->
+					
+					<!-- Google Sample: People API
+					 	<li>
+                <a href="googlesample.html" onclick=$("#menu-close").click();>Sample</a>
+            </li> 
+					-->
+					
+					 	<li>
+                <a href="service-test.html" onclick=$("#menu-close").click();>Service test</a>
+            </li> 			
+						<li>
+            <!--    <a href="favourite.html" onclick=$("#menu-close").click();>Favourite List</a> -->
+							<!--<button id="fav">
+								favourite
+							</button>-->
+							<a id="fav" style="cursor:pointer;">favourite</a>
+            </li> 
+					
+						<li>
+               <!-- <button id="logout">Log Out</button> -->
+							<a id="logout" style="cursor:pointer;">Log Out</a>
+            </li> 
+<!--			
+            <li>
+                <a href="#about" onclick=$("#menu-close").click();>About</a>
+            </li>
+					
+            <li>
+                <a href="#services" onclick=$("#menu-close").click();>Services</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+            </li>
+			<li>
+                <a href="#signin" onclick=$("#menu-close").click();>Sign In</a>
+            </li>
+-->			
+        </ul>
+    </nav>
+
+
+
+
+
+<div ng-app="myCommitmentList" ng-cloak ng-controller="myCtrl" class="w3-card-2 w3-margin text-center" style="max-width:400px;">
+  <header class="w3-container w3-light-grey w3-padding-16">
+    <h3>My Commitment List</h3>
+		<p>
+			Just like a 'To-Do-List'! 
+			<br>
+			Commit 'what you would do' here to remind you how to build a healthy relationship with others.
+			<br>
+			When you could finish the promises everyday, you may remove the promises from the list or continue to keep it.
+			<br>
+			Please remember your commitment all the times.
+		</p>
+		
+  </header>
+  <ul class="w3-ul">
+    <li ng-repeat="x in promises" class="w3-padding-16">{{x}}<span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">×</span></li>
+  </ul>
+  <div class="w3-container w3-light-grey w3-padding-16">
+    <div class="w3-row w3-margin-top">
+      <div class="w3-col s10">
+        <input placeholder="Add your promises here" ng-model="addMe" class="w3-input w3-border w3-padding">
+      </div>
+      <div class="w3-col s2">
+        <button ng-click="addItem()" class="w3-btn w3-padding w3-green">Add</button>
+      </div>
+    </div>
+    <p class="w3-text-red">{{errortext}}</p>
+  </div>
+</div>
+
+   <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });	
+	
+// Commitment List Angular JS
+var app = angular.module("myCommitmentList", []); 
+app.controller("myCtrl", function($scope) {
+    $scope.promises = ["Spend time with my family", "Reduce speak impolite words to my lover", "Listen and communicate more to my friends"];
+    $scope.addItem = function () {
+        $scope.errortext = "";
+        if (!$scope.addMe) {return;}
+        if ($scope.promises.indexOf($scope.addMe) == -1) {
+            $scope.promises.push($scope.addMe);
+        } else {
+            $scope.errortext = "The promise is already in your commitment list.";
+        }
+    }
+    $scope.removeItem = function (x) {
+        $scope.errortext = "";    
+        $scope.promises.splice(x, 1);
+    }
+});
+			
+</script>
+	
+</body>
+</html>
